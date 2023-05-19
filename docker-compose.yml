@@ -1,0 +1,18 @@
+#https://docs.docker.com/compose/compose-file/compose-versioning/
+version: '3.5'
+
+services:
+  ### Contenitore
+  store:
+    image: mcperrone81/store-aws:latest
+    restart: unless-stopped
+    container_name: demo-store
+    volumes: 
+      - ../logs:/webapi/logs
+    ports:
+      - target: 5054
+        published: 5054
+        protocol: tcp
+        mode: host
+    
+      
