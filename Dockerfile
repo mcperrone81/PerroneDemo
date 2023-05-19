@@ -1,4 +1,4 @@
 FROM openjdk:11-jre-slim
 EXPOSE 5054
-ADD target/articoli-webservice-kube-0.0.1-SNAPSHOT.jar articoli-webservice-kube.jar
-ENTRYPOINT  ["java","-jar","/articoli-webservice-kube.jar"]
+ADD target/perrone-demo-0.0.1-SNAPSHOT.jar perrone-demo.jar
+ENTRYPOINT  ["java","-jar","/perrone-demo.jar"]
